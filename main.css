@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
 
-:root{
+:root {
     --barColors: #fffeff;
+    --height: 95vh;
 }
 
 
@@ -9,7 +10,7 @@ body {
     font-family: 'Titillium Web', sans-serif;
     overflow: hidden;
     padding-top: 15px;
-    background: linear-gradient(114deg,#ebe9f1,#d4d2d9,#bcbac1);
+    background: linear-gradient(114deg, #ebe9f1, #d4d2d9, #bcbac1);
     background-size: 1000% 1000%;
     color: white;
     -webkit-animation: AnimationName 30s ease infinite;
@@ -19,41 +20,80 @@ body {
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 64%}
-    50%{background-position:100% 37%}
-    100%{background-position:0% 64%}
+    0% {
+        background-position: 0% 64%
+    }
+
+    50% {
+        background-position: 100% 37%
+    }
+
+    100% {
+        background-position: 0% 64%
+    }
 }
+
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 64%}
-    50%{background-position:100% 37%}
-    100%{background-position:0% 64%}
+    0% {
+        background-position: 0% 64%
+    }
+
+    50% {
+        background-position: 100% 37%
+    }
+
+    100% {
+        background-position: 0% 64%
+    }
 }
+
 @-o-keyframes AnimationName {
-    0%{background-position:0% 64%}
-    50%{background-position:100% 37%}
-    100%{background-position:0% 64%}
+    0% {
+        background-position: 0% 64%
+    }
+
+    50% {
+        background-position: 100% 37%
+    }
+
+    100% {
+        background-position: 0% 64%
+    }
 }
+
 @keyframes AnimationName {
-    0%{background-position:0% 64%}
-    50%{background-position:100% 37%}
-    100%{background-position:0% 64%}
+    0% {
+        background-position: 0% 64%
+    }
+
+    50% {
+        background-position: 100% 37%
+    }
+
+    100% {
+        background-position: 0% 64%
+    }
 }
-.fixed{
+
+.fixed {
     position: fixed;
     height: 100%;
 
 
 }
-.leftbar{
-    margin-top:5px;
+
+.leftbar {
+    margin-top: 5px;
     margin-left: 10px;
     padding-top: 5px;
-    width:80px;
+    width: 80px;
     background: var(--barColors);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    animation: clipMe 8s linear infinite;
 }
-.container{
+
+.container {
     flex: 1;
     overflow: scroll;
     padding: 6px;
@@ -64,27 +104,50 @@ body {
     color: black;
     flex-direction: column;
 }
+
 .container::-webkit-scrollbar {
     display: none;
-  }
-.avatar{
+}
+
+.avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-top: 5px;
     margin-left: 5px;
 }
-.flex{display:flex;}
-.flex-col{flex-direction:column;}
-.flex-row{flex-direction:row;}
-.flex-ac{align-items:center;}
-.flex-jc{justify-content:center;}
-* { padding: 0; margin: 0; }
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-ac {
+    align-items: center;
+}
+
+.flex-jc {
+    justify-content: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 html, body, #fullheight {
     min-height: 100% !important;
     height: 100%;
 }
-.rightbar{
+
+.rightbar {
     padding-top: 10px;
     margin-right: 10px;
     border-end-end-radius: 10px;
@@ -93,25 +156,49 @@ html, body, #fullheight {
     color: black;
     margin-top: 5px;
 }
-.flex svg{
+
+.flex svg {
     margin-bottom: 5px;
 }
 
-.menus{
+.rightbar iframe {
+    border: 0;
+    height: 80vh;
+}
+
+
+.menus {
     padding: 8px;
     position: absolute;
     top: 20%;
     border-radius: 20px;
     color: #000;
-    background: rgb(194,191,191,0.3);
+    background: rgb(194, 191, 191, 0.3);
 }
-.menus svg{
+
+.menus svg {
     width: 30px;
     height: 30px;
 }
-.hover-red{
-    color:#000;
+
+.hover-red {
+    color: #000;
 }
-.hover-red:hover{
+
+.hover-red:hover {
     color: #448aff;
 }
+@keyframes clipMe {
+    0%, 100% {
+      clip: rect(0px, 220px, 2px, 0px);
+    }
+    25% {
+      clip: rect(0px, 2px, 220px, 0px);
+    }
+    50% {
+      clip: rect(218px, 220px, 220px, 0px);
+    }
+    75% {
+      clip: rect(0px, 220px, 220px, 218px);
+    }
+  }

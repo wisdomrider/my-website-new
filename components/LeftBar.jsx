@@ -24,8 +24,8 @@ export default function leftbar() {
             <div className="flex flex-col menus" >
                 {
                     Object.keys(items).map((item, index) => {
-                        return <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}  key={index}>
-                            <a class="hover-red"  href={item} target={item.includes('http') ? '_new' : '_self'}>
+                        return <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }}  key={index}>
+                            <a className="hover-red"  href={item} target={item.includes('http') ? '_new' : '_self'}>
                                 {items[item] }
                             </a>
                         </motion.div>
