@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+:root{
+    --barColors: #fffeff;
+}
+
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    overflow: hidden;
+    padding-top: 15px;
+    background: linear-gradient(114deg,#ebe9f1,#d4d2d9,#bcbac1);
+    background-size: 1000% 1000%;
+    color: white;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 64%}
+    50%{background-position:100% 37%}
+    100%{background-position:0% 64%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 64%}
+    50%{background-position:100% 37%}
+    100%{background-position:0% 64%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 64%}
+    50%{background-position:100% 37%}
+    100%{background-position:0% 64%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 64%}
+    50%{background-position:100% 37%}
+    100%{background-position:0% 64%}
+}
+.fixed{
+    position: fixed;
+    height: 100%;
+
+
+}
+.leftbar{
+    margin-top:5px;
+    margin-left: 10px;
+    padding-top: 5px;
+    width:80px;
+    background: var(--barColors);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.container{
+    flex: 1;
+    overflow: scroll;
+    padding: 6px;
+    padding-top: 10px;
+    background: #f8f6fa;
+    margin-top: 5px;
+    display: flex;
+    color: black;
+    flex-direction: column;
+}
+.container::-webkit-scrollbar {
+    display: none;
+  }
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.flex{display:flex;}
+.flex-col{flex-direction:column;}
+.flex-row{flex-direction:row;}
+.flex-ac{align-items:center;}
+.flex-jc{justify-content:center;}
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+}
+.rightbar{
+    padding-top: 10px;
+    margin-right: 10px;
+    border-end-end-radius: 10px;
+    border-top-right-radius: 10px;
+    background: var(--barColors);
+    color: black;
+    margin-top: 5px;
+}

@@ -1,10 +1,10 @@
-import Head from 'next/head'
+
+import Skeleton from 'react-loading-skeleton'
 
 export default function Home() {
   return (
-    <div className="container">
-      <b>Under Development!</b>
-      please check back later.
+    <div>
+      <Skeleton count={25} /> 
     </div>
   )
 }
