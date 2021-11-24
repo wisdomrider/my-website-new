@@ -93,3 +93,25 @@ html, body, #fullheight {
     color: black;
     margin-top: 5px;
 }
+.flex svg{
+    margin-bottom: 5px;
+}
+
+.menus{
+    padding: 8px;
+    position: absolute;
+    top: 20%;
+    border-radius: 20px;
+    color: #000;
+    background: rgb(194,191,191,0.3);
+}
+.menus svg{
+    width: 30px;
+    height: 30px;
+}
+.hover-red{
+    color:#000;
+}
+.hover-red:hover{
+    color: #448aff;
+}
