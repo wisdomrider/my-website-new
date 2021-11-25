@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Carousel } from 'react-responsive-carousel';
-const types = ['Hire Me', 'Android Apps By Me', 'Facebook Page']
+const types = ['Projects for Sale', 'Android Apps By Me', 'Facebook Page']
 import Skeleton from 'react-loading-skeleton';
 import { motion } from 'framer-motion';
 import { FaTimesCircle } from 'react-icons/fa';
@@ -24,7 +24,7 @@ export default function RightBar({ pageProps }) {
                 )}
                 showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} >
                 <div>
-                    HIRE
+                    
 
                 </div>
                 <div style={{ overflow: 'scroll', overflowX: 'hidden' }}>
