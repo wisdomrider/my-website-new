@@ -4,5 +4,7 @@ export default function Home(){
             Cool
         </div>
     )
+    
 
 }
+

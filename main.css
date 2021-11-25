@@ -84,13 +84,12 @@ body {
 
 .leftbar {
     margin-top: 5px;
-    margin-left: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
     padding-top: 5px;
     width: 80px;
     background: var(--barColors);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    animation: clipMe 8s linear infinite;
+
 }
 
 .container {
@@ -149,7 +148,6 @@ html, body, #fullheight {
 
 .rightbar {
     padding-top: 10px;
-    margin-right: 10px;
     border-end-end-radius: 10px;
     border-top-right-radius: 10px;
     background: var(--barColors);
@@ -170,7 +168,7 @@ html, body, #fullheight {
 .menus {
     padding: 8px;
     position: absolute;
-    top: 20%;
+    top: 15%;
     border-radius: 20px;
     color: #000;
     background: rgb(194, 191, 191, 0.3);
@@ -188,17 +186,20 @@ html, body, #fullheight {
 .hover-red:hover {
     color: #448aff;
 }
-@keyframes clipMe {
-    0%, 100% {
-      clip: rect(0px, 220px, 2px, 0px);
-    }
-    25% {
-      clip: rect(0px, 2px, 220px, 0px);
-    }
-    50% {
-      clip: rect(218px, 220px, 220px, 0px);
-    }
-    75% {
-      clip: rect(0px, 220px, 220px, 218px);
-    }
-  }
+
+.root {
+    display: flex;
+    height: var(--height);
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.app-card{
+
+    background: rgb(194, 191, 191, 0.3);
+    padding: 2px;
+    margin:5px;
+    border-radius: 7px;
+    font-weight: bold;
+}
