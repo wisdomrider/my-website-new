@@ -6,8 +6,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useEffect } from 'react';
 
 export default function MyApp({ Component, pageProps }) {
-   
+
     return <div className="root" >
+        <div className="traveler">
+            <div className="block"></div>
+        </div>
+
         <title>Avishek || Wisdomrider</title>
         <LeftBar />
         <div className="container">

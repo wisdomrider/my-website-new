@@ -9,7 +9,10 @@ export default function RightBar({ pageProps }) {
 
     return (
         <div style={{ width: 240 }}>
-            <h3>&nbsp;&nbsp;{types[sliderItem]} </h3>
+            <div className="flex flex-jc">
+                <h3 style={{ marginBottom: 7 }}>&nbsp;&nbsp;{types[sliderItem]} </h3>
+
+            </div>
             <hr />
 
             <Carousel
@@ -24,7 +27,7 @@ export default function RightBar({ pageProps }) {
                 )}
                 showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} >
                 <div>
-                    
+
 
                 </div>
                 <div style={{ overflow: 'scroll', overflowX: 'hidden' }}>

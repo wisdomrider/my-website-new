@@ -195,11 +195,61 @@ html, body, #fullheight {
     margin-left: 10px;
     border-radius: 10px;
 }
-.app-card{
+
+.app-card {
 
     background: rgb(194, 191, 191, 0.3);
     padding: 2px;
-    margin:5px;
+    margin: 5px;
     border-radius: 7px;
     font-weight: bold;
+}
+
+.traveler {
+    left: 6px;
+    top: 21px;
+    width: 99.2%;
+    border-radius: 10px;
+    height: 95.5%;
+    position: fixed;
+    /* background: #000; */
+    z-index: -1;
+    /* z-index: 123; */
+    overflow: hidden;
+
+
+}
+
+
+.block {
+    left: 100%;
+    /* gradient background */
+    background: linear-gradient(90deg, #361d81, red, var(--barColors));
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: o-rotate-360 linear 8s infinite;
+    /* animation: o-rotate-360 linear 8s infinite; */
+    ;
+
+}
+
+@-webkit-keyframes o-rotate-360 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes o-rotate-360 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

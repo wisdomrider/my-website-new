@@ -14,7 +14,7 @@ const items = {
     'https://stackoverflow.com/users/8386357/avishek-adhikari?tab=profile': [<ImStackoverflow />, '#e77c38'],
     'https://g.dev/wisdomrider': [<AiFillGoogleCircle />, 'red'],
     'https://gitlab.com/wisdomrider': [<AiFillGitlab />, '#d7412c'],
-    'mailto:avishekzone@gmail.com': [<AiFillMail />, 'black'],
+    'mailto:avishekzone@gmail.com': [<AiFillMail />, 'purple'],
     'https://www.linkedin.com/in/wisdomrider': [<AiFillLinkedin />, '#2562a9'],
 }
 export default function leftbar() {
