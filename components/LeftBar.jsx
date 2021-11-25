@@ -29,7 +29,7 @@ export default function leftbar() {
                 {
                     Object.keys(items).map((item, index) => {
                         return <motion.div whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.9 }} key={index}>
-                            <a onMouseEnter={e => e.target.style.color = items[item][1]}
+                            <a 
                                 onMouseOver={e => e.target.style.color = items[item][1]}
                                 onMouseOut={e => e.target.style.color = 'black'}
                                 className="hover-red" href={item} target={item.includes('http') ? '_new' : '_self'}>
