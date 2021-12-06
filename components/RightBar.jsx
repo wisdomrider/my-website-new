@@ -18,20 +18,14 @@ export default function RightBar({ pageProps }) {
             <Carousel
                 interval={10000}
                 onChange={(i) => setSliderItem(i)}
-                renderIndicator={(handler, isSelected, index, label) => (
-
-                    <div className="flex flex-row">
-                        {isSelected ? <FaTimesCircle /> : <Skeleton width={30} height={30} />}
-                    </div>
-
-                )}
+                
                 showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} >
                 <div>
 
 
                 </div>
                 <div style={{ overflow: 'scroll', overflowX: 'hidden' }}>
-                    {pageProps.appList ? pageProps.appList.map(item => <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} onClick={() => window.open(item.appLink, '_blank')} class="flex app-card flex-ac">
+                    {pageProps.appList ? pageProps.appList.map((item,i) => <motion.div key={i} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} onClick={() => window.open(item.appLink, '_blank')} className="flex app-card flex-ac">
                         <img className="avatar" style={{ width: 25, height: 25 }} src={item.appIcon} />
                         &nbsp;&nbsp;
                         <p>{item.appName}</p>
