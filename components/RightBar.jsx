@@ -18,14 +18,35 @@ export default function RightBar({ pageProps }) {
             <Carousel
                 interval={10000}
                 onChange={(i) => setSliderItem(i)}
-                
+
                 showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} >
-                <div>
+                <motion.div whileHover={{ scale: 1.05 }} style={{ overflow: 'scroll', overflowX: 'hidden' }}>
+
+                    <div style={{borderRadius:5}} className="card">
+                        <b>E-Commerce Site/App</b>
+                        <div className="price"><s><small>$380</small></s>&nbsp;&nbsp;$350</div>
+                        <div className="desc">
+                            <p>
+                                Fully fledged e-commerce site/app for a local business which can boost your sales and
+                                increase your revenue.
+                            </p>
+                        </div>
+                        <hr />
+                        <div style={{ marginTop: 5, marginBottom: 5 }}>
+                            <motion.button whileTap={{scale:0.8}} onClick={() => window.open('https://shop.wisd.xyz')} style={{ marginRight: 10 }} className="btn btn-primary">View Demo</motion.button>
+                            <motion.button whileTap={{scale:0.8}} className="btn btn-secondary" onClick={() => window.open('https://m.me/wisdomrider')}>Buy Now</motion.button>
+                        </div>
 
 
-                </div>
+
+
+
+
+
+                    </div>
+                </motion.div>
                 <div style={{ overflow: 'scroll', overflowX: 'hidden' }}>
-                    {pageProps.appList ? pageProps.appList.map((item,i) => <motion.div key={i} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} onClick={() => window.open(item.appLink, '_blank')} className="flex app-card flex-ac">
+                    {pageProps.appList ? pageProps.appList.map((item, i) => <motion.div key={i} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} onClick={() => window.open(item.appLink, '_blank')} className="flex app-card flex-ac">
                         <img className="avatar" style={{ width: 25, height: 25 }} src={item.appIcon} />
                         &nbsp;&nbsp;
                         <p>{item.appName}</p>

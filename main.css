@@ -253,3 +253,28 @@ html, body, #fullheight {
         transform: rotate(360deg);
     }
 }
+.btn{
+    padding: 5px;
+    color: white;
+    height: 27px;
+    border-radius: 10px;
+    font-size: 13px;
+
+}
+.btn-primary{
+    background: rgb(32, 32, 85);
+}
+.btn-secondary{
+    background: rgb(7, 112, 7);
+}
+.card{
+    padding: 5px;
+    margin: 5px;
+    background: #efefef;
+
+}
+.price{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(68, 22, 10);
+}
