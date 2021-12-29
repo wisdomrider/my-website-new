@@ -15,6 +15,12 @@ export default function MyApp({ Component, pageProps }) {
         <title>Avishek || Wisdomrider</title>
         <LeftBar />
         <div className="container">
+            {/* <div className='menu'>
+                <li>Blogs</li>
+                <li>About Me</li>
+                <li>Contact</li>
+            </div>
+ */}
             <Component  {...pageProps} />
         </div>
         <div className="rightbar" >

@@ -96,7 +96,6 @@ body {
     flex: 1;
     overflow: scroll;
     padding: 6px;
-    padding-top: 10px;
     background: #f8f6fa;
     margin-top: 5px;
     display: flex;
@@ -277,4 +276,32 @@ html, body, #fullheight {
     font-size: 20px;
     font-weight: bold;
     color: rgb(68, 22, 10);
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    
+}
+.menu li{
+    list-style-type: none;
+    margin-left: 5px;
+    background: #000;
+    color: white;
+    padding: 5px;
+}
+.news{
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 5px;
+}
+.news .cover {
+    width: 220px;
+}
+.news{
+    display: flex;
 }
