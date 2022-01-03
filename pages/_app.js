@@ -1,7 +1,7 @@
 import LeftBar from '../components/LeftBar'
 import RightBar from '../components/RightBar'
 import 'react-loading-skeleton/dist/skeleton.css'
-import 'bootstrap/dist/css/bootstrap.css'; 
+import 'bootstrap/dist/css/bootstrap.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import '../main.css'
 
@@ -28,5 +28,6 @@ export default function MyApp({ Component, pageProps }) {
 
         </div>
     </div>
+
 }
 
