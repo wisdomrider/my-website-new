@@ -13,8 +13,8 @@ export default function Home({ posts }) {
             <div className='content'>{s.content.markdown.split(" ").slice(0, 40).join(" ")}...</div>
 
             <div className='footers'>
-            <span className='date'>21 sep 2021</span>
-          </div>
+              <span className='date'>21 sep 2021</span>
+            </div>
           </div>
           <img className='cover' src={s.coverPicture.url} alt="" />
         </div>
@@ -23,7 +23,7 @@ export default function Home({ posts }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const googleApps = await (await fetch('https://play.google.com/store/apps/developer?id=Wisdomrider')).text();
   const $ = Cheerio.load(googleApps);
   const apps = $('.ImZGtf');
