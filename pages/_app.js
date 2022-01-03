@@ -1,9 +1,9 @@
 import LeftBar from '../components/LeftBar'
 import RightBar from '../components/RightBar'
-import '../main.css'
 import 'react-loading-skeleton/dist/skeleton.css'
+import 'bootstrap/dist/css/bootstrap.css'; 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { useEffect } from 'react';
+import '../main.css'
 
 export default function MyApp({ Component, pageProps }) {
 

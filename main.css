@@ -154,7 +154,7 @@ html, body, #fullheight {
     margin-top: 5px;
 }
 
-.flex svg {
+.leftbar svg {
     margin-bottom: 5px;
 }
 
@@ -304,4 +304,9 @@ html, body, #fullheight {
 }
 .news{
     display: flex;
+}
+.badge-primary{
+    color: #fff;
+    background-color: #007bff;
+    margin-left: 2px;
 }

@@ -1,6 +1,8 @@
 import { gql, GraphQLClient } from 'graphql-request'
-import Skeleton from 'react-loading-skeleton'
+import TimeAgo from 'timeago-react';
 import Cheerio from 'cheerio';
+import ReactMarkdown from 'react-markdown';
+import { FaEye } from 'react-icons/fa';
 export default function Home({ posts }) {
   return (
     <div>
@@ -10,10 +12,16 @@ export default function Home({ posts }) {
         <div key={s.id} className='news'>
           <div>
             <h2 className='title'>{s.title}</h2>
-            <div className='content'>{s.content.markdown.split(" ").slice(0, 40).join(" ")}...</div>
+            <div className='content'>
+              <ReactMarkdown children={s.content.markdown.split("\n")[0] + "..."} />
+            </div>
 
             <div className='footers'>
-              <span className='date'>21 sep 2021</span>
+              <span className='date'><TimeAgo datetime={s.createdAt} /> </span>
+              <br />
+              {s.tags.map((s, i) => <span className="badge badge-primary" key={i}>{s}</span>)}
+              <span style={{marginLeft:10}} className='badge bg-success'><FaEye style={{ marginBottom: 0 }} />&nbsp;112</span>
+
             </div>
           </div>
           <img className='cover' src={s.coverPicture.url} alt="" />
@@ -42,14 +50,14 @@ export async function getServerSideProps(context) {
   const postsQuery = gql`
   {
    
-      posts{
-        title,id,tags
-      content{
-        markdown
-      },coverPicture {
-        url
-      }
+    posts(orderBy: createdAt_DESC){
+      title,id,tags,createdAt,
+    content{
+      markdown
+    },coverPicture {
+      url
     }
+  }
     
   }
 `

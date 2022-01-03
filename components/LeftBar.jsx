@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { AiFillFacebook, AiFillGithub, AiFillGitlab, AiFillGoogleCircle, AiFillInstagram, AiFillLinkedin, AiFillMail, AiFillYoutube } from 'react-icons/ai'
 import { ImStackoverflow } from 'react-icons/im'
-import { FaGooglePlay } from 'react-icons/fa'
+import { FaEye, FaGooglePlay } from 'react-icons/fa'
 import { DiNpm } from 'react-icons/di'
 const items = {
     'https://fb.com/wisdomriderr': [<AiFillFacebook />, 'blue'],
@@ -41,6 +41,7 @@ export default function leftbar() {
                 }
 
             </div>
+            <div style={{ position: "absolute", bottom: 5,left:0,right:0 }} className='flex flex-jc'><span className='badge bg-danger'><FaEye style={{marginBottom:0}}/>&nbsp;112</span></div>
         </div>
     )
 }
