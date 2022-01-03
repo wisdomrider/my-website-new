@@ -41,7 +41,6 @@ export default function leftbar() {
                 }
 
             </div>
-            <div style={{ position: "absolute", bottom: 5,left:0,right:0 }} className='flex flex-jc'><span className='badge bg-danger'><FaEye style={{marginBottom:0}}/>&nbsp;112</span></div>
         </div>
     )
 }
