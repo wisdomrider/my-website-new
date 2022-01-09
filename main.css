@@ -310,3 +310,8 @@ html, body, #fullheight {
     background-color: #007bff;
     margin-left: 2px;
 }
+.item:hover{
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+}

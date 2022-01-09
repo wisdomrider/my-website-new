@@ -22,6 +22,7 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+           <script src="https://cdn.tailwindcss.com"></script>
         </Head>
         <body>
           <Main />

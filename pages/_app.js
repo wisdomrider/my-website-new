@@ -8,19 +8,21 @@ import '../main.css'
 export default function MyApp({ Component, pageProps }) {
 
     return <div className="root" >
-        <div className="traveler">
+        {/* <div className="traveler">
             <div className="block"></div>
-        </div>
+        </div> */}
 
         <title>Avishek || Wisdomrider</title>
         <LeftBar />
         <div className="container">
-            {/* <div className='menu'>
-                <li>Blogs</li>
-                <li>About Me</li>
-                <li>Contact</li>
+            <div style={{background:"rgb(194, 191, 191, 0.3)"}} className="card rounded-lg">
+                <ul className="flex justify-center">
+                    <li className="p-1 mr-2 item">Home</li>
+                    <li className="p-1 ml-2 item">Posts</li>
+                    <li className="p-1 ml-2 item">Download CV</li>
+                </ul>
+
             </div>
- */}
             <Component  {...pageProps} />
         </div>
         <div className="rightbar" >
