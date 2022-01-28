@@ -295,6 +295,7 @@ html, body, #fullheight {
 }
 .news{
     padding: 10px;
+    padding-top: 1px;
     background: #fff;
     border-radius: 10px;
     margin: 5px;
