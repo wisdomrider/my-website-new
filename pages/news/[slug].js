@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import TimeAgo from "timeago-react";
 import { useRouter } from "next/router";
 import { MdArrowBack } from "react-icons/md";
+import { Image } from "@chakra-ui/react";
 export default function Post() {
   const [post, setPost] = useState(null);
   const { back } = useRouter();
@@ -38,7 +39,9 @@ export default function Post() {
           </div>
           <h1 className="text-4xl font-bold mb-1">{post.title}</h1>
           <TimeAgo datetime={post.createdAt} />
-          <img
+          <Image
+            mb={5}
+            mt={4}
             className="float-right mr-6"
             style={{
               maxHeight: "200px",

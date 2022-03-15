@@ -11,19 +11,20 @@ import {
   AiFillYoutube,
 } from "react-icons/ai";
 import { ImStackoverflow } from "react-icons/im";
-import { FaEye, FaGooglePlay } from "react-icons/fa";
+import { FaGooglePlay } from "react-icons/fa";
 import { DiNpm } from "react-icons/di";
+import { Box, Flex } from "@chakra-ui/react";
 const items = {
   "https://fb.com/wisdomriderr": [<AiFillFacebook />, "blue"],
   "https://play.google.com/store/apps/developer?id=Wisdomrider": [
     <FaGooglePlay />,
-    "#11d0f8",
+    "#3498ad",
   ],
   "https://github.com/wisdomrider": [<AiFillGithub />, "black"],
   "https://www.npmjs.com/~wisdomrider": [<DiNpm />, "#c13534"],
   "https://www.instagram.com/wisdomriderwastaken": [
     <AiFillInstagram />,
-    "#f08447",
+    "#e1306c",
   ],
   "https://www.youtube.com/wisdomrider": [<AiFillYoutube />, "red"],
   "https://stackoverflow.com/users/8386357/avishek-adhikari?tab=profile": [
@@ -37,20 +38,9 @@ const items = {
 };
 export default function leftbar() {
   return (
-    <div className="leftbar flex flex-col flex-ac">
-      <motion.img
-        whileInView={{
-          boxShadow: "0px 0px 5px #000",
-        }}
-        whileHover={{ scale: 1.2 }}
-        style={{ marginTop: 5 }}
-        className="avatar"
-        src="https://avatars.githubusercontent.com/u/34032131?v=4"
-      />
+    <Box display={["none", "flex"]} className="leftbar flex flex-col flex-ac">
 
-      <div
-        className="flex flex-col menus"
-      >
+      <Flex direction="column" top={"23%"} className="menus">
         {Object.keys(items).map((item, index) => {
           return (
             <motion.div
@@ -70,7 +60,7 @@ export default function leftbar() {
             </motion.div>
           );
         })}
-      </div>
-    </div>
+      </Flex>
+    </Box>
   );
 }

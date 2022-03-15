@@ -4,6 +4,7 @@ import Cheerio from "cheerio";
 import ReactMarkdown from "react-markdown";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { Box, Image } from "@chakra-ui/react";
 export default function Home({ posts }) {
   const router = useRouter();
   return (
@@ -11,44 +12,51 @@ export default function Home({ posts }) {
       <h3>Recent Posts by Wisdomrider</h3>
       <hr />
       {posts.map((s) => (
-        <motion.div
-          whileTap={{ scale: 0.8 }}
-          onClick={() => {
-            localStorage.setItem("post", JSON.stringify(s));
-            router.push("/news/" + s.slug)
-          }}
-          whileHover={{ scale: 1.01 }}
-          key={s.id}
-          className="news"
-        >
-          <div className="flex flex-col" style={{ justifyContent: "center" }}>
-            <h2 className="title font-bold mb-2">{s.title}</h2>
-            <hr/>
-            <div className="content">
-              <ReactMarkdown
-                children={s.content.markdown.split("\n")[0] + "..."}
-              />
-            </div>
+        <Box shadow="lg" m={2} mt={4}>
+          <motion.div
+            whileTap={{ scale: 0.8 }}
+            onClick={() => {
+              localStorage.setItem("post", JSON.stringify(s));
+              router.push("/news/" + s.slug);
+            }}
+            whileHover={{ scale: 1.01 }}
+            key={s.id}
+            className="news"
+          >
+            <div className="flex flex-col" style={{ justifyContent: "center" }}>
+              <h2 className="title font-bold mb-2">{s.title}</h2>
+              <hr />
+              <div className="content">
+                <ReactMarkdown
+                  children={s.content.markdown.split("\n")[0] + "..."}
+                />
+              </div>
 
-            <div className="footers">
-              <span className="date">
-                <TimeAgo datetime={s.createdAt} />{" "}
-              </span>
-              <br />
-              {s.tags.map((s, i) => (
-                <span
-                  onClick={(e) => (window.location = "/tag/" + s)}
-                  className="badge badge-primary"
-                  key={i}
-                >
-                  {s}
+              <div className="footers">
+                <span className="date">
+                  <TimeAgo datetime={s.createdAt} />{" "}
                 </span>
-              ))}
-              {/* <span style={{marginLeft:10}} className='badge bg-success'><FaEye style={{ marginBottom: 0 }} />&nbsp;112</span> */}
+                <br />
+                {s.tags.map((s, i) => (
+                  <span
+                    onClick={(e) => (window.location = "/tag/" + s)}
+                    className="badge badge-primary"
+                    key={i}
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-          <img className="cover" src={s.coverPicture.url} alt="" />
-        </motion.div>
+            <Image
+              ml={3}
+              width={[100, 100, 100, 200]}
+              objectFit={"cover"}
+              src={s.coverPicture.url}
+              alt="news-title"
+            />
+          </motion.div>
+        </Box>
       ))}
     </div>
   );

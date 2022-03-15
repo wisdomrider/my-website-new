@@ -1,318 +1,308 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
 
 :root {
-    --barColors: #fffeff;
-    --height: 95vh;
+  --barColors: #fffeff;
+  --height: 95vh;
 }
 
-
 body {
-    font-family: 'Titillium Web', sans-serif;
-    overflow: hidden;
-    padding-top: 15px;
-    background: linear-gradient(114deg, #ebe9f1, #d4d2d9, #bcbac1);
-    background-size: 1000% 1000%;
-    color: white;
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    -o-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
+  font-family: "Titillium Web", sans-serif;
+  overflow: hidden;
+  background: linear-gradient(114deg, #ebe9f1, #d4d2d9, #bcbac1);
+  background-size: 1000% 1000%;
+  color: white;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 64%
-    }
+  0% {
+    background-position: 0% 64%;
+  }
 
-    50% {
-        background-position: 100% 37%
-    }
+  50% {
+    background-position: 100% 37%;
+  }
 
-    100% {
-        background-position: 0% 64%
-    }
+  100% {
+    background-position: 0% 64%;
+  }
 }
 
 @-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 64%
-    }
+  0% {
+    background-position: 0% 64%;
+  }
 
-    50% {
-        background-position: 100% 37%
-    }
+  50% {
+    background-position: 100% 37%;
+  }
 
-    100% {
-        background-position: 0% 64%
-    }
+  100% {
+    background-position: 0% 64%;
+  }
 }
 
 @-o-keyframes AnimationName {
-    0% {
-        background-position: 0% 64%
-    }
+  0% {
+    background-position: 0% 64%;
+  }
 
-    50% {
-        background-position: 100% 37%
-    }
+  50% {
+    background-position: 100% 37%;
+  }
 
-    100% {
-        background-position: 0% 64%
-    }
+  100% {
+    background-position: 0% 64%;
+  }
 }
 
 @keyframes AnimationName {
-    0% {
-        background-position: 0% 64%
-    }
+  0% {
+    background-position: 0% 64%;
+  }
 
-    50% {
-        background-position: 100% 37%
-    }
+  50% {
+    background-position: 100% 37%;
+  }
 
-    100% {
-        background-position: 0% 64%
-    }
+  100% {
+    background-position: 0% 64%;
+  }
 }
 
 .fixed {
-    position: fixed;
-    height: 100%;
-
-
+  position: fixed;
+  height: 100%;
 }
 
 .leftbar {
-    margin-top: 5px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    padding-top: 5px;
-    width: 80px;
-    background: var(--barColors);
-
+  margin-top: 5px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-top: 5px;
+  width: 80px;
+  background: var(--barColors);
 }
 
 .container {
-    flex: 1;
-    overflow: scroll;
-    padding: 6px;
-    background: #f8f6fa;
-    margin-top: 5px;
-    display: flex;
-    color: black;
-    flex-direction: column;
+  flex: 1;
+  overflow: scroll;
+  padding: 6px;
+  background: #f8f6fa;
+  margin-top: 5px;
+  display: flex;
+  color: black;
+  flex-direction: column;
 }
 
 .container::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 5px;
-    margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 5px;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .flex-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .flex-row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .flex-ac {
-    align-items: center;
+  align-items: center;
 }
 
 .flex-jc {
-    justify-content: center;
+  justify-content: center;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-html, body, #fullheight {
-    min-height: 100% !important;
-    height: 100%;
+html,
+body,
+#fullheight {
+  min-height: 100% !important;
+  height: 100%;
 }
 
 .rightbar {
-    padding-top: 10px;
-    border-end-end-radius: 10px;
-    border-top-right-radius: 10px;
-    background: var(--barColors);
-    color: black;
-    margin-top: 5px;
+  padding-top: 10px;
+  border-end-end-radius: 10px;
+  border-top-right-radius: 10px;
+  background: var(--barColors);
+  color: black;
+  margin-top: 5px;
 }
 
 .leftbar svg {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .rightbar iframe {
-    border: 0;
-    height: 80vh;
+  border: 0;
+  height: 80vh;
 }
 
-
 .menus {
-    padding: 8px;
-    position: absolute;
-    top: 15%;
-    border-radius: 20px;
-    color: #000;
-    background: rgb(194, 191, 191, 0.3);
+  padding: 8px;
+  position: absolute;
+  top: 15%;
+  border-radius: 20px;
+  color: #000;
+  background: rgb(194, 191, 191, 0.3);
 }
 
 .menus svg {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .hover-red {
-    color: #000;
+  color: #000;
 }
 
 .hover-red:hover {
-    color: #448aff;
+  color: #448aff;
 }
 
 .root {
-    display: flex;
-    height: var(--height);
-    margin-right: 10px;
-    margin-top: 5px;
-    margin-left: 10px;
-    border-radius: 10px;
+  display: flex;
+  height: var(--height);
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-left: 10px;
+  border-radius: 10px;
 }
 
 .app-card {
-
-    background: rgb(194, 191, 191, 0.3);
-    padding: 2px;
-    margin: 5px;
-    border-radius: 7px;
-    font-weight: bold;
+  background: rgb(194, 191, 191, 0.3);
+  padding: 2px;
+  margin: 5px;
+  border-radius: 7px;
+  font-weight: bold;
 }
 
 .traveler {
-    left: 6px;
-    top: 21px;
-    width: 99.2%;
-    border-radius: 10px;
-    height: 95.5%;
-    position: fixed;
-    /* background: #000; */
-    z-index: -1;
-    /* z-index: 123; */
-    overflow: hidden;
-
-
+  left: 6px;
+  top: 21px;
+  width: 99.2%;
+  border-radius: 10px;
+  height: 95.5%;
+  position: fixed;
+  /* background: #000; */
+  z-index: -1;
+  /* z-index: 123; */
+  overflow: hidden;
 }
 
-
 .block {
-    left: 100%;
-    /* gradient background */
-    background: linear-gradient(90deg, #361d81, red, var(--barColors));
-    display: block;
-    width: 100%;
-    height: 100%;
-    -webkit-animation: o-rotate-360 linear 8s infinite;
-    /* animation: o-rotate-360 linear 8s infinite; */
-    ;
-
+  left: 100%;
+  /* gradient background */
+  background: linear-gradient(90deg, #361d81, red, var(--barColors));
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: o-rotate-360 linear 8s infinite;
+  /* animation: o-rotate-360 linear 8s infinite; */
 }
 
 @-webkit-keyframes o-rotate-360 {
-    0% {
-        transform: rotate(0);
-    }
+  0% {
+    transform: rotate(0);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes o-rotate-360 {
-    0% {
-        transform: rotate(0);
-    }
+  0% {
+    transform: rotate(0);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.btn{
-    padding: 5px;
-    color: white;
-    height: 27px;
-    border-radius: 10px;
-    font-size: 13px;
-
+.btn {
+  padding: 5px;
+  color: white;
+  height: 27px;
+  border-radius: 10px;
+  font-size: 13px;
 }
-.btn-primary{
-    background: rgb(32, 32, 85);
+.btn-primary {
+  background: rgb(32, 32, 85);
 }
-.btn-secondary{
-    background: rgb(7, 112, 7);
+.btn-secondary {
+  background: rgb(7, 112, 7);
 }
-.card{
-    padding: 5px;
-    margin: 5px;
-    background: #efefef;
-
+.card {
+  padding: 5px;
+  margin: 5px;
+  background: #efefef;
 }
-.price{
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(68, 22, 10);
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(68, 22, 10);
 }
-.menu{
-    display: flex;
-    justify-content: center;
-    padding: 2px;
-    border-bottom: 2px solid;
-    border-left: 2px solid;
-    border-right: 2px solid;
-    
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-right: 2px solid;
 }
-.menu li{
-    list-style-type: none;
-    margin-left: 5px;
-    background: #000;
-    color: white;
-    padding: 5px;
+.menu li {
+  margin-left: 5px;
+  background: #000;
+  color: white;
+  padding: 5px;
 }
-.news{
-    padding: 10px;
-    padding-top: 1px;
-    background: #fff;
-    border-radius: 10px;
-    margin: 5px;
+li {
+  list-style-type: none;
+}
+.news {
+  padding: 10px;
+  padding-top: 1px;
+  background: #fff;
+  /* border-radius: 10px; */
+  margin: 5px;
 }
 .news .cover {
-    width: 220px;
+  width: 220px;
 }
-.news{
-    display: flex;
+.news {
+  display: flex;
 }
-.badge-primary{
-    color: #fff;
-    background-color: #007bff;
-    margin-left: 2px;
+.badge-primary {
+  color: #fff;
+  background-color: #007bff;
+  margin-left: 2px;
 }
-.item:hover{
-    background: #000;
-    color: #fff;
-    border-radius: 10px;
+.item:hover {
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
 }
